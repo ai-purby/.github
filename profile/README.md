@@ -3,6 +3,10 @@
 > **AI 기반 홈 디바이스 Purby**
 > 일상 속 정보와 상호작용을 더 자연스럽게 연결하는 스마트 홈 디스플레이
 
+<p align="center">
+  <img src="./assets/purby-hero.png" alt="Purby AI smart home companion concept image" width="100%" />
+</p>
+
 ---
 
 ## ✨ Overview
@@ -179,16 +183,9 @@ Purby/
 
 ## 📷 Preview
 
-추후 여기에 다음과 같은 자료를 추가하면 README 완성도가 더욱 높아집니다.
+상단 대표 이미지는 Purby가 지향하는 스마트홈 디스플레이 경험과 캐릭터 기반 AI 인터랙션을 시각화한 콘셉트 이미지입니다.
 
-* 홈 화면 캡처
-* 캐릭터 렌더링 이미지
-* 시스템 아키텍처 다이어그램
-* 시연 GIF 또는 영상 링크
-
-```md
-![Purby Preview](./assets/purby-preview.png)
-```
+추후 홈 화면 캡처, 시스템 아키텍처 다이어그램, 시연 GIF 또는 영상 링크를 함께 추가할 예정입니다.
 
 ---
 
