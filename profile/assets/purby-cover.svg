@@ -1,0 +1,93 @@
+<svg width="1440" height="720" viewBox="0 0 1440 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Purby product cover</title>
+  <desc id="desc">A calm AI home display interface with a character companion and connected system cards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7EFE7"/>
+      <stop offset="0.48" stop-color="#EEF3EF"/>
+      <stop offset="1" stop-color="#EAF0F7"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="396" y1="146" x2="1036" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#272522"/>
+      <stop offset="1" stop-color="#151717"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="448" y1="212" x2="990" y2="504" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8EE"/>
+      <stop offset="1" stop-color="#F4FAF5"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="744" y1="210" x2="950" y2="476" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFC887"/>
+      <stop offset="1" stop-color="#F07D55"/>
+    </linearGradient>
+    <filter id="shadow" x="330" y="96" width="780" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="28"/>
+      <feGaussianBlur stdDeviation="32"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.29 0 0 0 0 0.22 0 0 0 0.22 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="720" fill="url(#bg)"/>
+  <circle cx="1174" cy="126" r="174" fill="#DCEAE1" opacity="0.7"/>
+  <circle cx="246" cy="610" r="218" fill="#F6D7BE" opacity="0.5"/>
+
+  <g opacity="0.85">
+    <rect x="72" y="78" width="196" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.56"/>
+    <text x="98" y="106" fill="#2C2A27" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650">AI home companion</text>
+    <rect x="1174" y="574" width="184" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.58"/>
+    <text x="1201" y="602" fill="#2C2A27" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="650">voice-first routines</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="376" y="132" width="688" height="456" rx="52" fill="url(#screen)"/>
+    <rect x="404" y="160" width="632" height="400" rx="36" fill="url(#panel)"/>
+    <rect x="432" y="190" width="214" height="154" rx="28" fill="#FFFFFF" fill-opacity="0.78"/>
+    <text x="458" y="234" fill="#2D2A26" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="44" font-weight="760">8:45</text>
+    <text x="560" y="234" fill="#9B8E7B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="650">AM</text>
+    <text x="458" y="274" fill="#685F55" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="620">Good morning</text>
+    <rect x="458" y="300" width="150" height="18" rx="9" fill="#ECD7BB"/>
+
+    <rect x="432" y="366" width="214" height="154" rx="28" fill="#FFFFFF" fill-opacity="0.64"/>
+    <rect x="458" y="394" width="162" height="22" rx="11" fill="#DDE9E0"/>
+    <rect x="458" y="432" width="120" height="18" rx="9" fill="#F3CFAF"/>
+    <rect x="458" y="468" width="148" height="18" rx="9" fill="#E9DED2"/>
+
+    <rect x="690" y="196" width="294" height="324" rx="36" fill="#FFF5E8"/>
+    <ellipse cx="837" cy="356" rx="112" ry="118" fill="url(#accent)"/>
+    <circle cx="798" cy="344" r="13" fill="#282421"/>
+    <circle cx="876" cy="344" r="13" fill="#282421"/>
+    <path d="M813 392C832 410 856 410 875 392" stroke="#3A2A20" stroke-width="9" stroke-linecap="round"/>
+    <path d="M747 266L782 214L812 284" fill="#F19161"/>
+    <path d="M922 266L892 214L862 284" fill="#F19161"/>
+    <path d="M766 270L784 242L800 280" fill="#FFE0C8"/>
+    <path d="M902 270L890 242L874 280" fill="#FFE0C8"/>
+    <rect x="748" y="458" width="178" height="24" rx="12" fill="#FFFFFF" fill-opacity="0.72"/>
+    <text x="778" y="475" fill="#7A5B46" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700">Purby is listening</text>
+  </g>
+
+  <g>
+    <path d="M248 262C248 229 275 202 308 202H370" stroke="#B9C6BD" stroke-width="3" stroke-linecap="round"/>
+    <rect x="112" y="226" width="156" height="72" rx="24" fill="#FFFFFF" fill-opacity="0.72"/>
+    <text x="142" y="256" fill="#4C4740" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="760">Wake word</text>
+    <text x="142" y="278" fill="#84796B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="560">audio capture</text>
+
+    <path d="M1192 262C1192 229 1165 202 1132 202H1070" stroke="#B9C6BD" stroke-width="3" stroke-linecap="round"/>
+    <rect x="1172" y="226" width="156" height="72" rx="24" fill="#FFFFFF" fill-opacity="0.72"/>
+    <text x="1204" y="256" fill="#4C4740" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="760">Action router</text>
+    <text x="1204" y="278" fill="#84796B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="560">daily tools</text>
+
+    <path d="M248 458C248 491 275 518 308 518H370" stroke="#B9C6BD" stroke-width="3" stroke-linecap="round"/>
+    <rect x="112" y="422" width="156" height="72" rx="24" fill="#FFFFFF" fill-opacity="0.72"/>
+    <text x="142" y="452" fill="#4C4740" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="760">Dashboard</text>
+    <text x="142" y="474" fill="#84796B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="560">home glance</text>
+
+    <path d="M1192 458C1192 491 1165 518 1132 518H1070" stroke="#B9C6BD" stroke-width="3" stroke-linecap="round"/>
+    <rect x="1172" y="422" width="156" height="72" rx="24" fill="#FFFFFF" fill-opacity="0.72"/>
+    <text x="1204" y="452" fill="#4C4740" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="760">Memory</text>
+    <text x="1204" y="474" fill="#84796B" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="560">context sync</text>
+  </g>
+</svg>
