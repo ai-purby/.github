@@ -1,6 +1,4 @@
-<a href="https://club-project-one.vercel.app/" target="_blank">
 ![Purby hero](./assets/hero_image.png)
-</a>
 
 <br/>
 <br/>
