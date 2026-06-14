@@ -1,5 +1,5 @@
 <a href="https://club-project-one.vercel.app/" target="_blank">
-![Purby hero](https://raw.githubusercontent.com/ai-purby/.github/main/profile/assets/hero-image.png)
+![Purby hero](./assets/hero-image.png)
 </a>
 
 <br/>
