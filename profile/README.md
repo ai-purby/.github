@@ -25,12 +25,11 @@ Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 
 
 # 2. Team Members (팀원 및 팀 소개)
 
-| 김규민 | 유승민 | 신준수 |
-| :---: | :---: | :---: |
+|                                김규민                                |                                 유승민                                 |                                신준수                                 |
+| :------------------------------------------------------------------: | :--------------------------------------------------------------------: | :-------------------------------------------------------------------: |
 | <img src="./assets/members/kim-gyumin.png" alt="김규민" width="150"> | <img src="./assets/members/yoo-seungmin.png" alt="유승민" width="150"> | <img src="./assets/members/shin-junsoo.png" alt="신준수" width="150"> |
-| 팀장 / PM / Infra / FE | 팀원 / Backend / DB | 팀원 / Mobile |
-| [GitHub](https://github.com/Ka11yV) | [GitHub](https://github.com/msnoeuan) | [GitHub](https://github.com/elizabeth030310) |
-
+|                        팀장 / PM / Infra / FE                        |                          팀원 / Backend / DB                           |                             팀원 / Mobile                             |
+|                 [GitHub](https://github.com/Ka11yV)                  |                 [GitHub](https://github.com/msnoeuan)                  |             [GitHub](https://github.com/elizabeth030310)              |
 
 <br/>
 <br/>
@@ -297,6 +296,61 @@ Purby는 디바이스, 모바일 앱, 백엔드 서버, 외부 API가 연결된 
 백엔드는 AWS EC2 환경에서 FastAPI 서버로 동작하며, PostgreSQL을 통해 사용자·일정·메모·디바이스 데이터를 저장하고 Redis를 활용해 세션 및 캐시 데이터를 관리합니다. OpenWeather API를 통해 날씨 정보를 조회하고, OpenAI API를 통해 사용자 음성 명령의 의도 분석 및 AI 응답 생성을 처리합니다.
 
 디바이스와 모바일 앱은 HTTPS 기반 REST API로 백엔드와 통신하며, 인증에는 JWT를 사용합니다. 또한 Tailscale VPN을 통해 원격 환경에서도 안전하게 디바이스와 서버를 연결할 수 있도록 구성했습니다.
+
+<br/>
+<br/>
+
+# 7. Hardware Design (하드웨어 설계)
+
+Purby 디바이스는 **Jetson Nano Developer Kit J1020 4GB**와 **ZEUSLAP P16K 포터블 디스플레이**를 하나의 액자 프레임 안에 통합하는 구조로 설계했습니다.
+
+전면에는 P16K 디스플레이를 배치하여 퍼비 캐릭터 UI와 일정, 날씨, 메모 등의 생활 정보를 출력하고, 후면 또는 내부 공간에는 Jetson Nano를 배치하여 음성 인식, 서버 통신, 디바이스 제어 로직을 실행합니다. 이를 통해 사용자는 일반 디지털 액자처럼 자연스럽게 설치할 수 있으면서도, 내부적으로는 AI 스마트 디바이스처럼 동작하는 형태를 목표로 했습니다.
+
+<br/>
+
+## 7.1 Power Design (전원 설계)
+
+![Purby hardware power design](./assets/hardware_design.png)
+
+하드웨어 전원은 하나의 220V AC 입력을 기준으로 구성했습니다.  
+AC 전원은 12V DC 어댑터를 통해 변환되며, 변환된 12V 전원은 터미널 블럭에서 디스플레이와 Jetson Nano 전원 라인으로 분기됩니다.
+
+- **P16K 디스플레이**: 12V 전원을 PD 변환 모듈을 통해 USB-C PD 입력으로 변환하여 공급
+- **Jetson Nano**: 12V 전원을 강압 모듈을 통해 5V로 변환한 뒤 DC 잭 형태로 공급
+- **전원 분기 구조**: 터미널 블럭을 사용해 하나의 어댑터에서 디스플레이와 Jetson Nano에 안정적으로 전원 분배
+- **프레임 내부 배치**: Jetson Nano, 전원 변환 모듈, 배선부를 액자 프레임 내부에 배치하여 외부 노출을 최소화
+
+<br/>
+
+## 7.2 Frame Structure (액자 프레임 구조)
+
+Purby의 외형은 디지털 액자 형태를 기준으로 설계했습니다.  
+P16K 디스플레이가 전면 화면 역할을 하고, Jetson Nano와 전원 변환 부품은 프레임 내부 또는 후면 공간에 고정됩니다.
+
+이 구조는 다음과 같은 장점을 가집니다.
+
+- 디스플레이와 연산 장치를 하나의 제품 형태로 통합
+- 외부에는 전원 케이블만 노출되는 단순한 설치 구조
+- 디지털 액자처럼 책상, 선반, 거실 등에 자연스럽게 배치 가능
+- 내부 모듈 교체 및 유지보수가 가능한 구조
+- 실제 하드웨어 기반 AI 디바이스로서의 완성도 확보
+
+<br/>
+
+## 7.3 Hardware Components (하드웨어 구성 요소)
+
+| 구성 요소                           | 역할                                                    |
+| ----------------------------------- | ------------------------------------------------------- |
+| Jetson Nano Developer Kit J1020 4GB | 퍼비 디바이스 메인 연산 장치                            |
+| ZEUSLAP P16K Portable Display       | 퍼비 캐릭터 UI 및 생활 정보 출력 화면                   |
+| 12V DC Adapter                      | 전체 시스템 전원 공급                                   |
+| Terminal Block                      | 12V 전원 분기                                           |
+| PD Conversion Module                | P16K 디스플레이용 USB-C PD 전원 변환                    |
+| Step-down Module                    | Jetson Nano용 12V to 5V 전압 변환                       |
+| Frame Body                          | 디스플레이, 보드, 전원 모듈을 수납하는 액자형 외장 구조 |
+
+<br/>
+<br/>
 
 <br/>
 <br/>
