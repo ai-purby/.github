@@ -104,85 +104,115 @@ Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 
 
 # 5. Technology Stack (기술 스택)
 
-## 5.1 Language
-
-# 5. Technology Stack (기술 스택)
-
 ## 5.1 Device
 
-| 기술         | 아이콘                                                                   | 사용 목적                              |
-| ------------ | ------------------------------------------------------------------------ | -------------------------------------- |
-| React        | <img src="./assets/icons/react.png" alt="React" width="80">              | 퍼비 디바이스 화면 UI 개발             |
-| Vite         | <img src="./assets/icons/vite.png" alt="Vite" width="80">                | 빠른 프론트엔드 개발 환경 구성         |
-| Zustand      | <img src="./assets/icons/zustand.png" alt="Zustand" width="80">          | 캐릭터 상태 및 디바이스 화면 상태 관리 |
-| Tailwind CSS | <img src="./assets/icons/tailwindcss.png" alt="Tailwind CSS" width="80"> | 디바이스 UI 스타일링                   |
+<p>
+  <img src="./assets/icons/react.png" alt="React" width="60">
+  <img src="./assets/icons/vite.png" alt="Vite" width="60">
+  <img src="./assets/icons/zustand.png" alt="Zustand" width="60">
+  <img src="./assets/icons/tailwindcss.png" alt="Tailwind CSS" width="60">
+</p>
+
+- **React**: 퍼비 디바이스 화면 UI 개발
+- **Vite**: 빠른 프론트엔드 개발 환경 구성
+- **Zustand**: 캐릭터 상태 및 디바이스 화면 상태 관리
+- **Tailwind CSS**: 디바이스 UI 스타일링
 
 <br/>
 
 ## 5.2 Mobile
 
-| 기술    | 아이콘                                                          | 사용 목적                        |
-| ------- | --------------------------------------------------------------- | -------------------------------- |
-| Flutter | <img src="./assets/icons/flutter.png" alt="Flutter" width="80"> | 모바일 앱 화면 및 기능 개발      |
-| Dart    | <img src="./assets/icons/dart.png" alt="Dart" width="80">       | Flutter 기반 모바일 앱 로직 구현 |
+<p>
+  <img src="./assets/icons/flutter.png" alt="Flutter" width="60">
+  <img src="./assets/icons/dart.png" alt="Dart" width="60">
+</p>
+
+- **Flutter**: 모바일 앱 화면 및 기능 개발
+- **Dart**: Flutter 기반 모바일 앱 로직 구현
 
 <br/>
 
 ## 5.3 Backend
 
-| 기술       | 아이콘                                                                | 사용 목적                       |
-| ---------- | --------------------------------------------------------------------- | ------------------------------- |
-| FastAPI    | <img src="./assets/icons/fastapi.png" alt="FastAPI" width="80">       | REST API 서버 개발              |
-| SQLAlchemy | <img src="./assets/icons/sqlalchemy.png" alt="SQLAlchemy" width="80"> | ORM 기반 데이터베이스 모델 관리 |
-| Alembic    | <img src="./assets/icons/alembic.png" alt="Alembic" width="80">       | 데이터베이스 마이그레이션 관리  |
-| Pydantic   | <img src="./assets/icons/pydantic.png" alt="Pydantic" width="80">     | 요청 및 응답 데이터 검증        |
+<p>
+  <img src="./assets/icons/fastapi.png" alt="FastAPI" width="60">
+  <img src="./assets/icons/sqlalchemy.png" alt="SQLAlchemy" width="60">
+  <img src="./assets/icons/alembic.png" alt="Alembic" width="60">
+  <img src="./assets/icons/pydantic.png" alt="Pydantic" width="60">
+</p>
+
+- **FastAPI**: REST API 서버 개발
+- **SQLAlchemy**: ORM 기반 데이터베이스 모델 관리
+- **Alembic**: 데이터베이스 마이그레이션 관리
+- **Pydantic**: 요청 및 응답 데이터 검증
 
 <br/>
 
 ## 5.4 Database
 
-| 기술       | 아이콘                                                                | 사용 목적                                |
-| ---------- | --------------------------------------------------------------------- | ---------------------------------------- |
-| PostgreSQL | <img src="./assets/icons/postgresql.png" alt="PostgreSQL" width="80"> | 사용자, 일정, 메모, 디바이스 데이터 저장 |
+<p>
+  <img src="./assets/icons/postgresql.png" alt="PostgreSQL" width="60">
+  <img src="./assets/icons/pgvector.png" alt="pgvector" width="60">
+</p>
+
+- **PostgreSQL**: 사용자, 일정, 메모, 디바이스 데이터 저장
+- **pgvector**: 벡터 데이터 저장 및 AI 기능 확장을 위한 기반 구성
 
 <br/>
 
 ## 5.5 Infra
 
-| 기술   | 아이콘                                                        | 사용 목적                                       |
-| ------ | ------------------------------------------------------------- | ----------------------------------------------- |
-| Docker | <img src="./assets/icons/docker.png" alt="Docker" width="80"> | 서버 실행 환경 컨테이너화                       |
-| Redis  | <img src="./assets/icons/redis.png" alt="Redis" width="80">   | 캐싱 및 빠른 데이터 처리를 위한 인메모리 저장소 |
-| Oracle | <img src="./assets/icons/oracle.png" alt="Oracle" width="80"> | 서버 배포 및 인프라 운영 환경 구성              |
+<p>
+  <img src="./assets/icons/docker.png" alt="Docker" width="60">
+  <img src="./assets/icons/redis.png" alt="Redis" width="60">
+  <img src="./assets/icons/oracle.png" alt="Oracle" width="60">
+</p>
+
+- **Docker**: 서버 실행 환경 컨테이너화
+- **Redis**: 캐싱 및 빠른 데이터 처리를 위한 인메모리 저장소
+- **Oracle**: 서버 배포 및 인프라 운영 환경 구성
 
 <br/>
 
 ## 5.6 AI & Voice
 
-| 기술                | 아이콘                                                                        | 사용 목적                        |
-| ------------------- | ----------------------------------------------------------------------------- | -------------------------------- |
-| ElevenLabs          | <img src="./assets/icons/elevenlabs.png" alt="ElevenLabs" width="80">         | TTS 기반 음성 응답 생성          |
-| faster-whisper      | <img src="./assets/icons/faster-whisper.png" alt="faster-whisper" width="80"> | STT 기반 사용자 음성 텍스트 변환 |
-| Picovoice Porcupine | <img src="./assets/icons/picovoice.png" alt="Picovoice Porcupine" width="80"> | “퍼비야” 호출어 감지             |
+<p>
+  <img src="./assets/icons/elevenlabs.png" alt="ElevenLabs" width="60">
+  <img src="./assets/icons/faster-whisper.png" alt="faster-whisper" width="60">
+  <img src="./assets/icons/picovoice.png" alt="Picovoice Porcupine" width="60">
+</p>
+
+- **ElevenLabs**: TTS 기반 음성 응답 생성
+- **faster-whisper**: STT 기반 사용자 음성 텍스트 변환
+- **Picovoice Porcupine**: “퍼비야” 호출어 감지
 
 <br/>
 
 ## 5.7 Hardware
 
-| 기술                                | 아이콘                                                                                          | 사용 목적                                   |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| Jetson Nano Developer Kit J1020 4GB | <img src="./assets/icons/jetson-nano.png" alt="Jetson Nano Developer Kit J1020 4GB" width="80"> | 퍼비 디바이스 실행 보드                     |
-| ZEUSLAP P16K                        | <img src="./assets/icons/zeuslap-p16k.png" alt="ZEUSLAP P16K" width="80">                       | 퍼비 캐릭터 UI 및 생활 정보 출력 디스플레이 |
+<p>
+  <img src="./assets/icons/jetson-nano.png" alt="Jetson Nano Developer Kit J1020 4GB" width="60">
+  <img src="./assets/icons/zeuslap-p16k.png" alt="ZEUSLAP P16K" width="60">
+</p>
+
+- **Jetson Nano Developer Kit J1020 4GB**: 퍼비 디바이스 실행 보드
+- **ZEUSLAP P16K**: 퍼비 캐릭터 UI 및 생활 정보 출력 디스플레이
 
 <br/>
 
 ## 5.8 Cooperation
 
-| 기술    | 아이콘                                                          | 사용 목적                  |
-| ------- | --------------------------------------------------------------- | -------------------------- |
-| Git     | <img src="./assets/icons/git.png" alt="Git" width="80">         | 버전 관리                  |
-| GitHub  | <img src="./assets/icons/github.png" alt="GitHub" width="80">   | 코드 저장소 관리 및 협업   |
-| ClickUp | <img src="./assets/icons/clickup.png" alt="ClickUp" width="80"> | 프로젝트 일정 및 작업 관리 |
+<p>
+  <img src="./assets/icons/git.png" alt="Git" width="60">
+  <img src="./assets/icons/github.png" alt="GitHub" width="60">
+  <img src="./assets/icons/clickup.png" alt="ClickUp" width="60">
+</p>
+
+- **Git**: 버전 관리
+- **GitHub**: 코드 저장소 관리 및 협업
+- **ClickUp**: 프로젝트 일정 및 작업 관리
+
+<br/>
 
 <br/>
 
