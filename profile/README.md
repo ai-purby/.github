@@ -3,13 +3,11 @@
 <br/>
 <br/>
 
-# 0. Getting Started (시작하기)
+# 0. Project Intro (프로젝트 소개)
 
-```bash
-$ npm start
-```
+Purby는 음성 인터랙션과 캐릭터 UI를 결합한 AI 스마트 디스플레이입니다.
 
-[서비스 링크](https://club-project-one.vercel.app/)
+사용자는 “퍼비야”라는 호출어로 디바이스와 상호작용할 수 있으며, 퍼비는 일정, 날씨, 메모, 알림 등 일상 정보를 친근한 캐릭터 반응과 함께 제공합니다.
 
 <br/>
 <br/>
@@ -27,11 +25,12 @@ Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 
 
 # 2. Team Members (팀원 및 팀 소개)
 
-|                                                        김규민                                                        |                                                        유승민                                                        |                                                        신준수                                                        |
-| :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: | --- |
-| <img src="https://github.com/user-attachments/assets/c1c2b1e3-656d-4712-98ab-a15e91efa2da" alt="김규민" width="150"> | <img src="https://github.com/user-attachments/assets/78ec4937-81bb-4637-975d-631eb3c4601e" alt="유승민" width="150"> | <img src="https://github.com/user-attachments/assets/78ce1062-80a0-4edb-bf6b-5efac9dd992e" alt="신준수" width="150"> |
-|                                                      PM, Infra                                                       |                                                          BE                                                          |                                                        Mobile                                                        | FE  |
-|                                         [GitHub](https://github.com/LDK1009)                                         |                                         [GitHub](https://github.com/SinYusi)                                         |                                         [GitHub](https://github.com/nay3on)                                          |
+| 김규민 | 유승민 | 신준수 |
+| :---: | :---: | :---: |
+| <img src="./assets/members/kim-gyumin.png" alt="김규민" width="150"> | <img src="./assets/members/yoo-seungmin.png" alt="유승민" width="150"> | <img src="./assets/members/shin-junsoo.png" alt="신준수" width="150"> |
+| 팀장 / PM / Infra / FE | 팀원 / Backend / DB | 팀원 / Mobile |
+| [GitHub](https://github.com/Ka11yV) | [GitHub](https://github.com/msnoeuan) | [GitHub](https://github.com/elizabeth030310) |
+
 
 <br/>
 <br/>
@@ -170,7 +169,7 @@ Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 
 
 - **Docker**: 서버 실행 환경 컨테이너화
 - **Redis**: 캐싱 및 빠른 데이터 처리를 위한 인메모리 저장소
-- **Oracle A1**: 서버 배포 및 인프라 운영 환경 구성
+- **Oracle**: 서버 배포 및 인프라 운영 환경 구성
 
 <br/>
 
@@ -219,232 +218,85 @@ Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 
 # 6. Project Structure (프로젝트 구조)
 
 ```plaintext
-project/
-├── public/
-│   ├── index.html           # HTML 템플릿 파일
-│   └── favicon.ico          # 아이콘 파일
-├── src/
-│   ├── assets/              # 이미지, 폰트 등 정적 파일
-│   ├── components/          # 재사용 가능한 UI 컴포넌트
-│   ├── hooks/               # 커스텀 훅 모음
-│   ├── pages/               # 각 페이지별 컴포넌트
-│   ├── App.js               # 메인 애플리케이션 컴포넌트
-│   ├── index.js             # 엔트리 포인트 파일
-│   ├── index.css            # 전역 css 파일
-│   ├── firebaseConfig.js    # firebase 인스턴스 초기화 파일
-│   package-lock.json    # 정확한 종속성 버전이 기록된 파일로, 일관된 빌드를 보장
-│   package.json         # 프로젝트 종속성 및 스크립트 정의
-├── .gitignore               # Git 무시 파일 목록
-└── README.md                # 프로젝트 개요 및 사용법
+purby-presentation/
+├── purby-front/                         # React + TypeScript Vite 프론트엔드
+│   ├── index.html                       # Vite HTML 엔트리 파일
+│   ├── package.json                     # 프론트엔드 의존성 및 스크립트
+│   ├── package-lock.json                # npm 의존성 잠금 파일
+│   ├── vite.config.ts                   # Vite 설정
+│   ├── eslint.config.js                 # ESLint 설정
+│   ├── tsconfig.json                    # TypeScript 공통 설정
+│   └── src/
+│       ├── main.tsx                     # React 앱 엔트리 포인트
+│       ├── App.tsx                      # 메인 애플리케이션 컴포넌트
+│       ├── App.css                      # App 전용 스타일
+│       ├── index.css                    # 전역 스타일
+│       ├── assets/                      # 이미지 및 정적 리소스
+│       │   └── purby/                   # 퍼비 3D 모델(GLB) 리소스
+│       ├── components/                  # 재사용 가능한 UI 컴포넌트
+│       │   ├── calendar/                # 캘린더 관련 컴포넌트
+│       │   ├── device-pairing/          # 디바이스 페어링 UI
+│       │   └── weather/                 # 날씨 관련 컴포넌트
+│       ├── pages/                       # 페이지 단위 컴포넌트
+│       │   ├── DashboardPage.tsx        # 메인 대시보드 화면
+│       │   └── DevicePairingPage.tsx    # 디바이스 페어링 화면
+│       ├── store/                       # Zustand 상태 관리
+│       ├── types/                       # TypeScript 타입 정의
+│       ├── utils/                       # 공통 유틸 함수
+│       └── mocks/                       # 개발용 mock 데이터
+│
+├── purby-backend/                       # FastAPI 백엔드 서버
+│   ├── Dockerfile                       # 백엔드 Docker 이미지 설정
+│   ├── docker-compose.yml               # Postgres/Redis 포함 로컬 실행 설정
+│   ├── requirements.txt                 # Python 의존성 목록
+│   ├── alembic.ini                      # Alembic 마이그레이션 설정
+│   ├── alembic/
+│   │   ├── env.py                       # Alembic 실행 환경
+│   │   └── versions/                    # DB 마이그레이션 파일
+│   ├── src/
+│   │   ├── main.py                      # FastAPI 앱 엔트리 포인트
+│   │   ├── api/                         # API 라우터
+│   │   │   ├── devices.py               # 디바이스 API
+│   │   │   ├── schedules.py             # 일정 API
+│   │   │   ├── memo.py                  # 메모 API
+│   │   │   ├── voice.py                 # 음성/WebSocket API
+│   │   │   ├── weather.py               # 날씨 API
+│   │   │   ├── character_state.py       # 퍼비 캐릭터 상태 API
+│   │   │   └── sse.py                   # 서버 이벤트 스트림 API
+│   │   ├── core/                        # DB, Redis 등 핵심 인프라 설정
+│   │   ├── models/                      # SQLAlchemy 데이터 모델
+│   │   ├── schemas/                     # Pydantic 요청/응답 스키마
+│   │   ├── services/                    # 비즈니스 로직
+│   │   └── utils/                       # 백엔드 공통 유틸
+│   └── tests/                           # pytest 테스트 코드
+│
+├── purby-device/                        # 퍼비 디바이스 Python 클라이언트
+│   ├── main.py                          # wake-word 감지, 녹음, WebSocket 전송 로직
+│   ├── audio_response.py                # 오디오 응답 처리 로직
+│   ├── requirements.txt                 # 디바이스 클라이언트 의존성
+│   ├── purby_wakeword_mac.ppn           # Porcupine wake-word 모델
+│   ├── porcupine_params_ko.pv           # 한국어 Porcupine 파라미터 모델
+│   ├── purby_tts.wav                    # 로컬 음성 샘플 파일
+│   └── tests/                           # 디바이스 클라이언트 테스트
+│
+├── AGENTS.md                            # 전체 워크스페이스 작업 지침
+└── README.md                            # 프로젝트 개요 문서
 ```
 
 <br/>
 <br/>
 
-# 7. Development Workflow (개발 워크플로우)
+# 6. System Architecture (시스템 아키텍처)
 
-## 브랜치 전략 (Branch Strategy)
+![Purby system architecture](./assets/system.png)
 
-우리의 브랜치 전략은 Git Flow를 기반으로 하며, 다음과 같은 브랜치를 사용합니다.
+Purby는 디바이스, 모바일 앱, 백엔드 서버, 외부 API가 연결된 AI 스마트홈 디바이스 구조로 설계되었습니다.
 
-- Main Branch
-  - 배포 가능한 상태의 코드를 유지합니다.
-  - 모든 배포는 이 브랜치에서 이루어집니다.
-- {name} Branch
-  - 팀원 각자의 개발 브랜치입니다.
-  - 모든 기능 개발은 이 브랜치에서 이루어집니다.
+디바이스 영역에서는 Python 기반 메인 앱이 호출어 감지, 음성 입력, 서버 통신을 담당하고, React 기반 Web UI가 퍼비 캐릭터 상태와 생활 정보를 화면에 표시합니다. 모바일 앱은 사용자 인증, 일정 및 메모 관리, QR 기반 디바이스 페어링을 제공합니다.
 
-<br/>
-<br/>
+백엔드는 AWS EC2 환경에서 FastAPI 서버로 동작하며, PostgreSQL을 통해 사용자·일정·메모·디바이스 데이터를 저장하고 Redis를 활용해 세션 및 캐시 데이터를 관리합니다. OpenWeather API를 통해 날씨 정보를 조회하고, OpenAI API를 통해 사용자 음성 명령의 의도 분석 및 AI 응답 생성을 처리합니다.
 
-# 8. Coding Convention
-
-## 문장 종료
-
-```
-// 세미콜론(;)
-console.log("Hello World!");
-```
-
-<br/>
-
-## 명명 규칙
-
-- 상수 : 영문 대문자 + 스네이크 케이스
-
-```
-const NAME_ROLE;
-```
-
-- 변수 & 함수 : 카멜케이스
-
-```
-// state
-const [isLoading, setIsLoading] = useState(false);
-const [isLoggedIn, setIsLoggedIn] = useState(false);
-const [errorMessage, setErrorMessage] = useState('');
-const [currentUser, setCurrentUser] = useState(null);
-
-// 배열 - 복수형 이름 사용
-const datas = [];
-
-// 정규표현식: 'r'로 시작
-const = rName = /.*/;
-
-// 이벤트 핸들러: 'on'으로 시작
-const onClick = () => {};
-const onChange = () => {};
-
-// 반환 값이 불린인 경우: 'is'로 시작
-const isLoading = false;
-
-// Fetch함수: method(get, post, put, del)로 시작
-const getEnginList = () => {...}
-```
-
-<br/>
-
-## 블록 구문
-
-```
-// 한 줄짜리 블록일 경우라도 {}를 생략하지 않고, 명확히 줄 바꿈 하여 사용한다
-// good
-if(true){
-  return 'hello'
-}
-
-// bad
-if(true) return 'hello'
-```
-
-<br/>
-
-## 함수
-
-```
-함수는 함수 표현식을 사용하며, 화살표 함수를 사용한다.
-// Good
-const fnName = () => {};
-
-// Bad
-function fnName() {};
-```
-
-<br/>
-
-## 태그 네이밍
-
-Styled-component태그 생성 시 아래 네이밍 규칙을 준수하여 의미 전달을 명확하게 한다.<br/>
-태그명이 길어지더라도 의미 전달의 명확성에 목적을 두어 작성한다.<br/>
-전체 영역: Container<br/>
-영역의 묶음: {Name}Area<br/>
-의미없는 태그: <><br/>
-
-```
-<Container>
-  <ContentsArea>
-    <Contents>...</Contents>
-    <Contents>...</Contents>
-  </ContentsArea>
-</Container>
-```
-
-<br/>
-
-## 폴더 네이밍
-
-카멜 케이스를 기본으로 하며, 컴포넌트 폴더일 경우에만 파스칼 케이스로 사용한다.
-
-```
-// 카멜 케이스
-camelCase
-// 파스칼 케이스
-PascalCase
-```
-
-<br/>
-
-## 파일 네이밍
-
-```
-컴포넌트일 경우만 .jsx 확장자를 사용한다. (그 외에는 .js)
-customHook을 사용하는 경우 : use + 함수명
-```
+디바이스와 모바일 앱은 HTTPS 기반 REST API로 백엔드와 통신하며, 인증에는 JWT를 사용합니다. 또한 Tailscale VPN을 통해 원격 환경에서도 안전하게 디바이스와 서버를 연결할 수 있도록 구성했습니다.
 
 <br/>
 <br/>
-
-# 9. 커밋 컨벤션
-
-## 기본 구조
-
-```
-type : subject
-
-body
-```
-
-<br/>
-
-## type 종류
-
-```
-feat : 새로운 기능 추가
-fix : 버그 수정
-docs : 문서 수정
-style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
-refactor : 코드 리펙토링
-test : 테스트 코드, 리펙토링 테스트 코드 추가
-chore : 빌드 업무 수정, 패키지 매니저 수정
-```
-
-<br/>
-
-## 커밋 이모지
-
-```
-== 코드 관련
-📝	코드 작성
-🔥	코드 제거
-🔨	코드 리팩토링
-💄	UI / style 변경
-
-== 문서&파일
-📰	새 파일 생성
-🔥	파일 제거
-📚	문서 작성
-
-== 버그
-🐛	버그 리포트
-🚑	버그를 고칠 때
-
-== 기타
-🐎	성능 향상
-✨	새로운 기능 구현
-💡	새로운 아이디어
-🚀	배포
-```
-
-<br/>
-
-## 커밋 예시
-
-```
-== ex1
-✨Feat: "회원 가입 기능 구현"
-
-SMS, 이메일 중복확인 API 개발
-
-== ex2
-📚chore: styled-components 라이브러리 설치
-
-UI개발을 위한 라이브러리 styled-components 설치
-```
-
-<br/>
-<br/>
-
-# 10. 컨벤션 수행 결과
-
-<img width="100%" alt="코드 컨벤션" src="https://github.com/user-attachments/assets/0dc218c0-369f-45d2-8c6d-cdedc81169b4">
-<img width="100%" alt="깃플로우" src="https://github.com/user-attachments/assets/2a4d1332-acc2-4292-9815-d122f5aea77c">
