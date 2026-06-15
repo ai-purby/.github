@@ -20,6 +20,49 @@ Purby는 음성 인터랙션과 캐릭터 UI를 결합한 AI 스마트 디스플
 Purby는 사용자의 일상 정보를 한눈에 보여주고, 음성 명령을 통해 자연스럽게 상호작용할 수 있는 AI 디지털 액자 프로젝트입니다.</br>
 일정 관리, 날씨 확인, 메모, 알림 기능을 제공하며, 친근한 캐릭터 UI를 통해 기존 스마트 디스플레이보다 따뜻하고 감성적인 사용자 경험을 제공합니다.
 
+# 1-1. Core Services (핵심 서비스)
+
+Purby는 음성 대화, 날씨 정보, 알림, 일정 관리를 중심으로 사용자의 일상을 보조하는 AI 스마트 디스플레이입니다.
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="./assets/icons/icon_conversation.png" alt="음성 대화" width="120">
+      <br/>
+      <strong>AI 음성 대화</strong>
+    </td>
+    <td align="center" width="25%">
+      <img src="./assets/icons/icon_weather.png" alt="날씨 정보" width="120">
+      <br/>
+      <strong>날씨 정보</strong>
+    </td>
+    <td align="center" width="25%">
+      <img src="./assets/icons/icon_alert.png" alt="알림" width="120">
+      <br/>
+      <strong>알림</strong>
+    </td>
+    <td align="center" width="25%">
+      <img src="./assets/icons/icon_schedule.png" alt="일정 관리" width="120">
+      <br/>
+      <strong>일정 관리</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      호출어와 음성 명령을 통해 퍼비와 자연스럽게 대화하고 필요한 정보를 요청할 수 있습니다.
+    </td>
+    <td align="center">
+      사용자의 위치를 기반으로 현재 날씨와 생활 정보를 확인할 수 있습니다.
+    </td>
+    <td align="center">
+      타이머, 리마인더, 주요 일정 알림을 퍼비 캐릭터 반응과 함께 제공합니다.
+    </td>
+    <td align="center">
+      오늘의 일정과 예정된 일정을 디바이스 화면에서 한눈에 확인할 수 있습니다.
+    </td>
+  </tr>
+</table>
+
 <br/>
 <br/>
 
